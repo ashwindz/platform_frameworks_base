@@ -99,7 +99,7 @@
                     android:id="@+id/battery"
                     android:layout_height="wrap_content"
                     android:layout_width="wrap_content"
-                    android:paddingStart="4dip"
+                    android:paddingStart="3dip"
                     />
                 
                 <TextView
@@ -108,7 +108,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:singleLine="true"
-                    android:paddingLeft="4dip"
+                    android:paddingLeft="3dip"
                     android:gravity="center_vertical|left"
                     />
             </LinearLayout>
