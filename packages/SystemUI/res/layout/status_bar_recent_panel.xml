@@ -64,9 +64,10 @@
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:scaleType="center"
+
             android:layout_gravity="bottom|right"
             android:layout_marginBottom="25dp"
-            android:src="@drawable/ic_notify_clear" />
+            android:src="@drawable/ic_recents_clear" />
 
     </FrameLayout>
 
