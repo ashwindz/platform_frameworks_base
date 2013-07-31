@@ -1357,20 +1357,20 @@ public final class Settings {
             return putStringForUser(cr, name, Float.toString(value), userHandle);
         }
 
-		/**
-		* @hide
-		* Convenience function for retrieving a single system settings value
-		* as a boolean. Note that internally setting values are always
-		* stored as strings; this function converts the string to a boolean
-		* for you. It will only return true if the stored value is "1"
-		*
-		* @param cr The ContentResolver to access.
-		* @param name The name of the setting to retrieve.
-		* @param def Value to return if the setting is not defined.
-		*
-		* @return The setting's current value, or 'def' if it is not defined
-		* or not a valid integer.
-		*/
+        /**
+        * @hide
+        * Convenience function for retrieving a single system settings value
+        * as a boolean. Note that internally setting values are always
+        * stored as strings; this function converts the string to a boolean
+        * for you. It will only return true if the stored value is "1"
+        *
+        * @param cr The ContentResolver to access.
+        * @param name The name of the setting to retrieve.
+        * @param def Value to return if the setting is not defined.
+        *
+        * @return The setting's current value, or 'def' if it is not defined
+        * or not a valid integer.
+        */
         public static boolean getBoolean(ContentResolver cr, String name, boolean def) {
             String v = getString(cr, name);
             try {
@@ -1382,8 +1382,8 @@ public final class Settings {
                 return def;
             }
         }
-		
-		/**
+        
+        /**
          * Convenience function for updating a single settings value as a
          * boolean. This will either create a new entry in the
          * table if the given name does not exist, or modify the value of the
@@ -1403,12 +1403,12 @@ public final class Settings {
         /** @hide */
         public static boolean putBooleanForUser(ContentResolver cr, String name, Boolean value,
                 int userHandle) {
-			if (value == true) 
-				return putStringForUser(cr, name, "1", userHandle);
-			else
-				return putStringForUser(cr, name, "0", userHandle);		
-        }	
-		
+            if (value == true) 
+                return putStringForUser(cr, name, "1", userHandle);
+            else
+                return putStringForUser(cr, name, "0", userHandle);        
+        }    
+        
         /**
          * Convenience function to read all of the current
          * configuration-related settings into a
@@ -2367,6 +2367,13 @@ public final class Settings {
          */
         public static final String POINTER_SPEED = "pointer_speed";
 
+        
+        /**
+         * Wether it should hide Powermenu on Lockscreen or not
+         * @hide
+         */
+        public static final String ALLOW_ALL_ROTATIONS="allow_all_rotations";
+        
         /**
          * Settings to backup. This is here so that it's in the same place as the settings
          * keys and easy to update.
@@ -2432,7 +2439,8 @@ public final class Settings {
             SIP_CALL_OPTIONS,
             SIP_RECEIVE_CALLS,
             POINTER_SPEED,
-            VIBRATE_WHEN_RINGING
+            VIBRATE_WHEN_RINGING,
+            ALLOW_ALL_ROTATIONS
         };
 
         // Settings moved to Settings.Secure
@@ -3156,7 +3164,7 @@ public final class Settings {
                 int userHandle) {
             return putStringForUser(cr, name, Float.toString(value), userHandle);
         }
-		
+        
         /**
          * @deprecated Use {@link android.provider.Settings.Global#DEVELOPMENT_SETTINGS_ENABLED}
          * instead
