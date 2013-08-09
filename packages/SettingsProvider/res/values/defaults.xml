@@ -171,5 +171,5 @@
     
     <!-- Default for Settings.Secure.DIALPAD_AUTOCOMPLETE. -->
     <integer name="def_dialpad_autocomplete">1</integer>
->>>>>>> 96ac050... SettingsProvider: Add a default for the dialer's autocomplete and flip it on
+
 </resources>
