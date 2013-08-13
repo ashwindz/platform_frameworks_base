@@ -2433,6 +2433,36 @@ public final class Settings {
          */
         public static final String NAVIGATION_BAR_HEIGHT = "navigation_bar_height";
 
+        /**
+        * When to show Reboot in Powermenu
+        * @hide
+        */
+        public static final String POWERMENU_REBOOT_PREFS = "powermenu_reboot_prefs";
+
+        /**
+        * When to show Shutdown in Powermenu
+        * @hide
+        */
+        public static final String POWERMENU_SHUTDOWN_PREFS = "powermenu_shutdown_prefs";
+
+        /**
+        * When to show Shutdown in Powermenu
+        * @hide
+        */
+        public static final String POWERMENU_AIRPLANEMODE_PREFS = "powermenu_airplanemode_prefs";
+
+        /**
+        * When to show Shutdown in Powermenu
+        * @hide
+        */
+        public static final String POWERMENU_SILENTMODE_PREFS = "powermenu_silentmode_prefs";
+
+        /**
+        * When to show Shutdown in Powermenu
+        * @hide
+        */
+        public static final String POWERMENU_USERSWITCH_PREFS = "powermenu_userswitch_prefs";
+		
         /** 
          * Settings to backup. This is here so that it's in the same place as the settings
          * keys and easy to update.
@@ -2500,7 +2530,12 @@ public final class Settings {
             POINTER_SPEED,
             VIBRATE_WHEN_RINGING,
             ALLOW_ALL_ROTATIONS,
-            STATUS_BAR_BATTERY
+            STATUS_BAR_BATTERY,
+			POWERMENU_REBOOT_PREFS,
+            POWERMENU_SHUTDOWN_PREFS,
+            POWERMENU_AIRPLANEMODE_PREFS,
+            POWERMENU_SILENTMODE_PREFS,
+            POWERMENU_USERSWITCH_PREFS
         };
 
         // Settings moved to Settings.Secure
