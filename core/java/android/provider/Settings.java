@@ -2462,7 +2462,13 @@ public final class Settings {
         * @hide
         */
         public static final String POWERMENU_USERSWITCH_PREFS = "powermenu_userswitch_prefs";
-		
+
+        /**
+        * When to show Shutdown in Powermenu
+        * @hide
+        */
+        public static final String POWERMENU_SCREENSHOT_PREFS = "powermenu_screenshot_prefs";
+        
         /** 
          * Settings to backup. This is here so that it's in the same place as the settings
          * keys and easy to update.
@@ -2531,11 +2537,12 @@ public final class Settings {
             VIBRATE_WHEN_RINGING,
             ALLOW_ALL_ROTATIONS,
             STATUS_BAR_BATTERY,
-			POWERMENU_REBOOT_PREFS,
+            POWERMENU_REBOOT_PREFS,
             POWERMENU_SHUTDOWN_PREFS,
             POWERMENU_AIRPLANEMODE_PREFS,
             POWERMENU_SILENTMODE_PREFS,
-            POWERMENU_USERSWITCH_PREFS
+            POWERMENU_USERSWITCH_PREFS,
+            POWERMENU_SCREENSHOT_PREFS
         };
 
         // Settings moved to Settings.Secure

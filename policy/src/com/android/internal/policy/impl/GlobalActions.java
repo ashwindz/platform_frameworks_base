@@ -296,20 +296,24 @@ class GlobalActions implements DialogInterface.OnDismissListener, DialogInterfac
         }
 		
         // next: screenshot
-        mItems.add(
-            new SinglePressAction(R.drawable.ic_lock_screenshot, R.string.global_action_screenshot) {
-                public void onPress() {
-                    takeScreenshot();
-                }
+        Integer showPowermenuScreenshot =Settings.System.getInt(mContext.getContentResolver(),
+                Settings.System.POWERMENU_SCREENSHOT_PREFS, 2);
+        if ((showPowermenuScreenshot == 2) || (showPowermenuScreenshot == 1 && mKeyguardShowing == false)) { 		
+			mItems.add(
+				new SinglePressAction(R.drawable.ic_lock_screenshot, R.string.global_action_screenshot) {
+					public void onPress() {
+						takeScreenshot();
+					}
 
-                public boolean showDuringKeyguard() {
-                    return true;
-                }
+					public boolean showDuringKeyguard() {
+						return true;
+					}
 
-                public boolean showBeforeProvisioning() {
-                    return true;
-                }
+					public boolean showBeforeProvisioning() {
+						return true;
+					}
             });
+		}
 
         // next: airplane mode
         Integer showPowermenuAirplaneMode =Settings.System.getInt(mContext.getContentResolver(),
